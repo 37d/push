@@ -13,7 +13,7 @@ Npm.depends({
 
 Cordova.depends({
    //'1.6.4', // 1.3.0
-   'phonegap-plugin-push':  'https://github.com/intercom/phonegap-plugin-push.git/#95dc86548cecc80de7f5f4fef50ae74022810d19',
+   'phonegap-plugin-push':  'https://github.com/intercom/phonegap-plugin-push.git#95dc86548cecc80de7f5f4fef50ae74022810d19',
    'cordova-plugin-device': '1.1.1'
 });
 
