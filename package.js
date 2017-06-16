@@ -1,28 +1,29 @@
 Package.describe({
-  name: '37d:push',
+  name:    '37d:push',
   version: '3.0.3-rc.7',
   summary: 'Isomorphic Push notifications for APN and GCM',
-  git: 'https://github.com/37d/push.git'
+  git:     'https://github.com/37d/push.git'
 });
 
 // Server-side push deps
 Npm.depends({
-  'apn' : '1.6.2', // '1.7.4', // working: 1.6.2
-  'node-gcm' : '0.9.6', // '0.12.0' // working: 0.9.6
+  'apn':      '1.6.2', // '1.7.4', // working: 1.6.2
+  'node-gcm': '0.9.6', // '0.12.0' // working: 0.9.6
 });
 
 Cordova.depends({
-   //'1.6.4', // 1.3.0
-   'phonegap-plugin-push':  'https://github.com/intercom/phonegap-plugin-push.git#95dc86548cecc80de7f5f4fef50ae74022810d19',
-   'cordova-plugin-device': '1.1.1'
+  //'1.6.4', // 1.3.0
+  //'phonegap-plugin-push':  'https://github.com/intercom/phonegap-plugin-push.git#95dc86548cecc80de7f5f4fef50ae74022810d19',
+  'phonegap-plugin-push': '1.10.5',
+  'cordova-plugin-device': '1.1.1'
 });
 
 Package.registerBuildPlugin({
-  name: 'configuration',
-  use: [
+  name:            'configuration',
+  use:             [
     'check'
   ],
-  sources: [
+  sources:         [
     'plugin/push.configuration.js'
   ],
   npmDependencies: {
@@ -30,7 +31,7 @@ Package.registerBuildPlugin({
   }
 });
 
-Package.onUse(function(api) {
+Package.onUse(function (api) {
   api.versionsFrom('1.2');
   api.use(['ecmascript']);
 
